@@ -1,0 +1,260 @@
+/* components/Header/Header.module.css */
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(145deg, #2e7d32, #1a4d1e);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(46, 125, 50, 0.25);
+  flex-shrink: 0;
+}
+
+.logoMark svg {
+  width: 22px;
+  height: 22px;
+}
+
+.logoWordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 3px;
+}
+
+.logoTop {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+.logoTop em {
+  color: #2e7d32;
+  font-style: normal;
+}
+
+.logoSub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ── Navigation ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  position: relative;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.25s ease, background 0.25s ease;
+  white-space: nowrap;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: calc(100% - 28px);
+  height: 2px;
+  border-radius: 2px;
+  background: #388e3c;
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover {
+  color: #2e7d32;
+  background: #f1f8e9;
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navLinkActive {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.navLinkActive::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navSeparator {
+  width: 1px;
+  height: 20px;
+  background: #e0e0e0;
+  margin: 0 8px;
+  flex-shrink: 0;
+}
+
+/* ── CTA Buttons ── */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btnLogin {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.btnLogin:hover {
+  color: #333;
+  border-color: #e0e0e0;
+  background: #f0f0f0;
+}
+
+.btnInscrit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #388e3c, #1a4d1e);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btnInscrit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.38);
+}
+
+/* ── Hamburger (mobile) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hamburger span {
+  display: block;
+  height: 1.5px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.hamburger:hover {
+  border-color: #43a047;
+  background: #f1f8e9;
+}
+
+.hamburger:hover span {
+  background: #2e7d32;
+}
+
+/* ── Mobile Menu ── */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 20px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileMenuOpen {
+  display: flex;
+}
+
+.mobileDivider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 8px 0;
+}
+
+.mobileCta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobileCta .btnLogin,
+.mobileCta .btnInscrit {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 820px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
