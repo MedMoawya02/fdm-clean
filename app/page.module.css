@@ -298,3 +298,426 @@
     justify-content: center;
   }
 }
+
+/* ════════════════════════════════════════
+   WHY SECTION
+════════════════════════════════════════ */
+
+.whySection {
+  background: #fff;
+  padding: 80px 24px 96px;
+  height: 100vh;
+}
+
+.whyInner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.whyHeader {
+  margin-bottom: 10px;
+}
+
+.whySectionTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.whySectionBrand {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 800;
+  color: #2e7d32;
+  display: block;
+}
+
+/* ── Divider ── */
+.whyDivider {
+  height: 3px;
+  width: 64px;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  border-radius: 4px;
+  margin: 20px 0 48px;
+}
+
+/* ── Items list ── */
+.whyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Single item ── */
+.whyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid #f0f0f0;
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  cursor: default;
+}
+
+.whyItem:last-child {
+  border-bottom: none;
+}
+
+.whyItemVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover lift on the whole row */
+.whyItem:hover .whyIconWrap {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.18);
+}
+
+.whyItem:hover .whyTitle {
+  color: #2e7d32;
+}
+
+/* ── Icon circle ── */
+.whyIconWrap {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2.5px solid #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f8e9;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+}
+
+.whyIconWrap svg {
+  width: 34px;
+  height: 34px;
+}
+
+/* ── Text ── */
+.whyContent {
+  flex: 1;
+  padding-top: 6px;
+}
+
+.whyTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  transition: color 0.25s ease;
+}
+
+.whyDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.72;
+  max-width: 600px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .whySection {
+    padding: 56px 20px 72px;
+  }
+
+  .whyItem {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .whyIconWrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .whyIconWrap svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+
+/* ════════════════════════════════════════
+   HOW IT WORKS SECTION
+════════════════════════════════════════ */
+
+/* ── HOW IT WORKS — fond blanc (même style que whySection) ── */
+
+.howSection {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Léger motif radial discret sur fond blanc */
+.howSection::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, #e8f5e9 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.howSection::after {
+  content: '';
+  position: absolute;
+  bottom: -140px;
+  left: -100px;
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, #f1f8e9 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.howInner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Title (même style que whySectionTitle) ── */
+.howHeader {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.howTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+}
+
+.howTitleMark {
+  color: #2e7d32;
+}
+
+/* Divider vert — identique à whyDivider */
+.howDivider {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  border-radius: 4px;
+  margin: 16px auto 0;
+}
+
+.howSubtitle {
+  margin-top: 14px;
+  font-size: 15px;
+  color: #888;
+}
+
+/* ── Connector line (adaptée fond blanc) ── */
+.howStepsWrap {
+  position: relative;
+}
+
+.howConnector {
+  position: absolute;
+  top: 36px;
+  left: calc(12.5% + 36px);
+  right: calc(12.5% + 36px);
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.howConnectorFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  border-radius: 2px;
+  transition: width 1.4s cubic-bezier(.4,0,.2,1);
+}
+
+.howConnectorFillVisible {
+  width: 100%;
+}
+
+/* ── Steps grid ── */
+.howSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Single step ── */
+.howStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.howStepVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Number circle — vert sur fond blanc */
+.howNum {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  border: 2.5px solid #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.howStep:hover .howNum {
+  background: #2e7d32;
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(46,125,50,0.22);
+}
+
+.howStep:hover .howNumText {
+  color: #fff;
+}
+
+.howNumText {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #2e7d32;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+/* Card body — même style que whyItem */
+.howCard {
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 18px;
+  padding: 28px 20px 24px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.howStep:hover .howCard {
+  background: #fff;
+  border-color: #c8e6c9;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(46,125,50,0.10);
+}
+
+.howCardIcon {
+  font-size: 32px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.howCardTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  line-height: 1.25;
+  transition: color 0.25s ease;
+}
+
+.howStep:hover .howCardTitle {
+  color: #2e7d32;
+}
+
+.howCardSub {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.howCardDesc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.72;
+}
+
+/* ── CTA bottom — bouton vert sur fond blanc ── */
+.howCta {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.howCtaText {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.howCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #388e3c, #1a4d1e);
+  color: #fff;
+  border-radius: 50px;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.28);
+  transition: all 0.25s ease;
+}
+
+.howCtaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(46,125,50,0.38);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .howSteps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .howConnector {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .howSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .howSection {
+    padding: 60px 20px;
+  }
+}

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { DM_Sans, Outfit } from 'next/font/google';
 import Header from '@/components/Header/Header';
 import './globals.css';
+import Footer from '@/components/Footer/Footer';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
