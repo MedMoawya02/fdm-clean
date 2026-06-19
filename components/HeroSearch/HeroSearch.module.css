@@ -1,0 +1,104 @@
+.hero {
+  background: linear-gradient(135deg, #1a4d1e 0%, #1e5c23 70%, #2e7d32 100%);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(22px, 3.5vw, 34px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 28px;
+}
+
+.filterBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.filterLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 2px;
+}
+
+.filterSelect {
+  padding: 11px 36px 11px 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color: #fff;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  min-width: 180px;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.25s ease;
+}
+
+.filterSelect:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.filterSelect option {
+  background: #1a4d1e;
+  color: #fff;
+}
+
+.btnSearch {
+  padding: 12px 28px;
+  background: #fff;
+  color: #2e7d32;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btnSearch:hover {
+  background: #f1f8e9;
+}
+
+@media (max-width: 600px) {
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterSelect {
+    min-width: 100%;
+  }
+}

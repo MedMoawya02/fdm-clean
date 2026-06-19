@@ -1,0 +1,413 @@
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #1a4d1e 0%, #1e5c23 70%, #2e7d32 100%);
+  padding: 56px 24px 48px;
+  text-align: center;
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.heroDot {
+  width: 6px;
+  height: 6px;
+  background: #f9a825;
+  border-radius: 50%;
+}
+
+.title {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── PAGE BODY ── */
+.body {
+  max-width: 760px;
+  margin: -28px auto 0;
+  padding: 0 24px 64px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── PROGRESS STEPS ── */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 28px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.09);
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.progressCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  background: #f0f0f0;
+  color: #888;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.progressCircleActive {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.progressCircleDone {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.progressLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  display: none;
+}
+
+.progressLabelActive {
+  color: #1a1a1a;
+}
+
+.progressLine {
+  flex: 1;
+  height: 2px;
+  background: #f0f0f0;
+  margin: 0 4px;
+}
+
+.progressLineDone {
+  background: #2e7d32;
+}
+
+@media (min-width: 600px) {
+  .progressLabel { display: block; }
+}
+
+/* ── FORM CARD ── */
+.formCard {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0,0,0,.09);
+  padding: 32px 28px;
+}
+
+.stepTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.stepSub {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+/* ── Option cards (radio styled) ── */
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.optionCard {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.optionCard:hover {
+  border-color: #a5d6a7;
+  background: #fafafa;
+}
+
+.optionCardActive {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.optionIcon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.optionLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.optionDesc {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ── Form fields ── */
+.field {
+  margin-bottom: 20px;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 9px;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46,125,50,0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ── Frequency pills ── */
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 9px 18px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.pill:hover {
+  border-color: #a5d6a7;
+}
+
+.pillActive {
+  border-color: #2e7d32;
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* ── Summary box (step 4) ── */
+.summary {
+  background: #f1f8e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+}
+
+.summaryLabel {
+  color: #666;
+  font-weight: 600;
+}
+
+.summaryValue {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ── Nav buttons ── */
+.formNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btnBack {
+  padding: 12px 22px;
+  background: none;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnBack:hover {
+  border-color: #bbb;
+  background: #fafafa;
+}
+
+.btnNext {
+  flex: 1;
+  padding: 13px 22px;
+  background: linear-gradient(135deg, #388e3c, #1a4d1e);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(46,125,50,0.25);
+}
+
+.btnNext:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(46,125,50,0.32);
+}
+
+.btnNext:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Success state ── */
+.success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin: 0 auto 20px;
+}
+
+.successTitle {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.successText {
+  font-size: 14px;
+  color: #666;
+  max-width: 360px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.successBtn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.successBtn:hover {
+  background: #388e3c;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .optionGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 24px 18px;
+  }
+}

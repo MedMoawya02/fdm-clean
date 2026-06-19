@@ -1,0 +1,230 @@
+.card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,.09);
+  border-color: #bbb;
+  transform: translateY(-2px);
+}
+
+.cardTop {
+  padding: 18px 16px 14px;
+  position: relative;
+}
+
+.avatarRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.statusDot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.statusOnline { background: #4caf50; }
+.statusBusy   { background: #ef5350; }
+
+.avatarInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verifiedBadge {
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.unverifiedBadge {
+  background: #bbb;
+  color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+.metier {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.metierFdm        { color: #388e3c; }
+.metierNounou     { color: #e65100; }
+.metierCuisiniere { color: #c62828; }
+.metierVitrier    { color: #1565c0; }
+
+.location {
+  font-size: 12px;
+  color: #888;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 16px;
+  right: 14px;
+}
+
+.stars { color: #f9a825; font-size: 12px; }
+
+.score {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.reviews { font-size: 11px; color: #888; }
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 0 16px 12px;
+}
+
+.detailItem {
+  background: #fafafa;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+
+.detailLabel {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.detailValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.detailValueGreen { color: #2e7d32; }
+
+.sleeping {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border-top: 1px solid #f0f0f0;
+}
+
+.sleepingYes { color: #2e7d32; }
+.sleepingNo  { color: #666; }
+
+.cardFooter {
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  margin-top: auto;
+}
+
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.priceDay {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.priceDay span {
+  font-size: 11px;
+  font-weight: 400;
+  color: #888;
+}
+
+.priceWeek {
+  font-size: 11px;
+  color: #666;
+}
+
+.btnVoir {
+  padding: 7px 14px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btnVoir:hover { background: #388e3c; }
